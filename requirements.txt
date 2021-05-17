@@ -8,7 +8,7 @@ git+https://github.com/ariaghora/mpstemmer.git
 openpyxl==3.0.7
 pandas==1.2.3
 plotly==4.14.3
-streamlit==0.24.0
+streamlit==0.82.0
 sastrawi==1.0.1
-scikit-learn
+scikit-learn==0.24.0
 xlrd==2.0.1
