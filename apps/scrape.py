@@ -73,7 +73,7 @@ def app():
         df_data = pd.DataFrame({"Komentar":[i[1] for i in data_video]})
         df = df_data.drop(0)
         st.write("Jumlah Komentar:",len(df.index),"komentar")
-        convert_df = df.reset_index().to_json(r'./data/jsonfile/scrape.json', orient='records')
+        convert_df = df.reset_index().to_json('jsonfile/scrape.json', orient='records')
         st.dataframe(df)
         return df
     except:
