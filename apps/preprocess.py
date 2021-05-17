@@ -182,4 +182,4 @@ def app():
 
         return df
     except:
-        st.write("BELUM MELAKUKAN SCRAPE DATA")
+        st.write("Tidak ada data dikarenakan belum melakukan scrape")
