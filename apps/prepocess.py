@@ -24,7 +24,7 @@ from mpstemmer import MPStemmer
 def app():
     try:
         st.title("Hasil Preprocessing dan Labelling")
-        df = pd.read_json(r'./data/jsonfile/scrape.json')
+        df = pd.read_json('jsonfile/scrape.json')
         def case_fold(text):
             #Menghapus HTTP yang tidak selesai
             text = re.sub(r'^https?:\/\/.*[\r\n]*', '', text, flags=re.MULTILINE)
@@ -177,7 +177,7 @@ def app():
         c_negative = c.values[1]
         st.write("Jumlah Positif:",c_positive)
         st.write("Jumlah Negatif: ",c_negative)
-        convert_df = df.reset_index().to_json(r'./jsonfile/preprocess.json', orient='records')
+        convert_df = df.reset_index().to_json('jsonfile/preprocess.json', orient='records')
         st.dataframe(df)
 
         return df
