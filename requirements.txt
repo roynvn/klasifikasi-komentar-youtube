@@ -1,0 +1,14 @@
+google-api-python-client==2.1.0
+google-auth-oauthlib==0.4.4
+google-auth-httplib2==0.1.0
+nltk==3.5
+matplotlib==3.4.1
+python-Levenshtein
+git+https://github.com/ariaghora/mpstemmer.git
+openpyxl==3.0.7
+pandas==1.2.3
+plotly==4.14.3
+streamlit==0.24.0
+sastrawi==1.0.1
+scikit-learn
+xlrd==2.0.1
