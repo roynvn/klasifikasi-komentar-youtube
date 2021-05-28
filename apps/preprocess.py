@@ -212,5 +212,5 @@ def app():
             st.dataframe(df_empty)
             st.empty()
 
-    except:
-        st.error("TIDAK ADA DATA UNTUK DILAKUKAN PREPROCESSING DAN LABELLING DIKARENAKAN BELUM MELAKUKAN SCRAPE")
+    #except:
+        #st.error("TIDAK ADA DATA UNTUK DILAKUKAN PREPROCESSING DAN LABELLING DIKARENAKAN BELUM MELAKUKAN SCRAPE")
