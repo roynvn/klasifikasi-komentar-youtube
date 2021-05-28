@@ -205,14 +205,14 @@ def app():
             return df
 
         elif button_remove:
-            os.remove(path)
-            os.remove(path2)
-            try:
-                st.error("Dataset Scrape dan Preprocessing telah dihapus")
-                st.empty()
-            except:
+            if os.path.isfile(path1):
+                os.remove(path)
                 st.error("Dataset Scrape telah dihapus")
                 st.empty()
-
+            elif os.path.isfile(path1) and os.path.isfile(path2):
+                os.remove(path)
+                os.remove(path2)
+                st.error("Dataset Scrape dan Preprocessing telah dihapus")
+                st.empty()
     except:
         st.error("TIDAK ADA DATA UNTUK DILAKUKAN PREPROCESSING DAN LABELLING DIKARENAKAN BELUM MELAKUKAN SCRAPE")
