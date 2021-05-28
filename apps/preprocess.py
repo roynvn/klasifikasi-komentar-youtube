@@ -207,10 +207,12 @@ def app():
         elif button_remove:
             os.remove(path)
             os.remove(path2)
-            st.error("Dataset telah dihapus")
-            df_empty = pd.DataFrame({'Komentar' : []})
-            st.dataframe(df_empty)
-            st.empty()
+            try:
+                st.error("Dataset Scrape dan Preprocessing telah dihapus")
+                st.empty()
+            except:
+                st.error("Dataset Scrape telah dihapus")
+                st.empty()
 
     except:
         st.error("TIDAK ADA DATA UNTUK DILAKUKAN PREPROCESSING DAN LABELLING DIKARENAKAN BELUM MELAKUKAN SCRAPE")
