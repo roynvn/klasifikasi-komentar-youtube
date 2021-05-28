@@ -24,8 +24,8 @@ from mpstemmer import MPStemmer
 
 
 def app():
-    path = 'jsonfile\scrape.json'
-    path2 = 'jsonfile\preprocess.json'
+    path = 'jsonfile/scrape.json'
+    path2 = 'jsonfile/preprocess.json'
     try:
         st.title("Hasil Preprocessing dan Labelling")
         df = pd.read_json('jsonfile/scrape.json')
