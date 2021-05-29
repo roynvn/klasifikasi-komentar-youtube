@@ -111,11 +111,10 @@ def app():
         my_bar.progress(75+25)
         st.plotly_chart(graf_chart)
         
-        @st.cache
-        def refresh_cache():
-            os.remove(filePath)
-            os.remove(filePath2)
-        refresh_cache()
+      
+        os.remove(filePath)
+        os.remove(filePath2)
+        st.info("SEMUA DATA TELAH DIHAPUS")
         st.balloons()
     except:
         st.error("TIDAK ADA DATA UNTUK DILAKUKAN ANALISIS SENTIMEN DIKARENAKAN BELUM MELAKUKAN PREPROCESSING DAN LABELLING")
