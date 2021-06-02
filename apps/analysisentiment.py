@@ -24,6 +24,7 @@ def app():
     filePath2 = 'jsonfile/preprocess.json'
     try:
         st.title("Hasil Analisis Sentimen")
+        st.write("Progress:")
         my_bar = st.progress(0)
         df = pd.read_json('jsonfile/preprocess.json')
         c = df['Label'].value_counts()
