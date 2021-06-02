@@ -24,6 +24,16 @@ def loadpage():
                 1.Scrape --> 2.Preprocessing dan Labelling --> 3.Analisis Sentimen 
                 </br>
                 </br>
+                Perkiraan waktu yang dibutuhkan dalam melakukan analisis sentimen:
+                <ul>
+                    <li>Jumlah komentar < 250 = 3 menit </l1>
+                    <li>Jumlah komentar < 500 = 6 menit </l1>
+                    <li>Jumlah komentar < 750 = 9 menit </l1>
+                    <li>Jumlah komentar < 1000 = 12 menit </l1>
+                    <li>Jumlah komentar < 1300 = 15 menit </l1>
+                </ul>
+                </br>
+                </br>
                 </br>
                 Dibuat oleh: </br>
                 Nama    : Roy Noviantho</br>
