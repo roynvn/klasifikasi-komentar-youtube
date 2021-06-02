@@ -35,6 +35,7 @@ def app():
         st.dataframe(df)
         button_preprocessing = st.button("Lakukan Preprocessing dan Labelling")
         button_remove = st.button("Hapus Data")
+        st.write("Progress:")
         my_bar = st.progress(0)
         
         if button_preprocessing:
