@@ -14,6 +14,15 @@ def app():
     st.title("Hasil Scrape Data")
     gambar = PIL.Image.open('./data/example.PNG')
     st.image(gambar)
+    button_recommend = st.button("Lihat Rekomendasi Saluran Youtube mengenai Ulasan Makanan")
+    if button_recommend:
+        st.info('''
+                1.Farida Nurhan \n
+                2.MGDALENAF \n
+                3.Ken and Grat \n
+                4.Evan Media \n
+                dll
+                ''')
     video_id = st.text_input("Masukkan video id ")
     try:
         st.write("Video id yang digunakan:",video_id)
@@ -82,3 +91,4 @@ def app():
         return df
     except:
         st.error("VIDEO ID TIDAK ADA")
+        
