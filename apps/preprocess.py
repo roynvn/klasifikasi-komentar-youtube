@@ -39,7 +39,8 @@ def app():
         my_bar = st.progress(0)
         
         if button_preprocessing:
-            st.info("Tahapan:\nCase Fold-->Tokenize-->Normalisasi-->Stopwords-->Stemming-->Clean-->Labelling")
+            st.info('''Tahapan: \n 
+                    Case Fold-->Tokenize-->Normalisasi-->Stopwords-->Stemming-->Clean-->Labelling'''")
             def case_fold(text):
                 #Menghapus HTTP yang tidak selesai
                 text = re.sub(r'^https?:\/\/.*[\r\n]*', '', text, flags=re.MULTILINE)
