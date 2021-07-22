@@ -39,6 +39,7 @@ def app():
         my_bar = st.progress(0)
         
         if button_preprocessing:
+            start = time.time()
             st.info('''Tahapan: \n 
                     Case Fold-->Tokenize-->Normalisasi-->Stopwords-->Stemming-->Clean-->Labelling''')
             def case_fold(text):
@@ -205,6 +206,9 @@ def app():
             convert_df = df.reset_index().to_json('jsonfile/preprocess.json', orient='records')
             st.dataframe(df)
             st.info('Label 1: Positif dan Label 0: Negatif')
+            end = time.time()
+            result_time = end - start  
+            st.write("Waktu: ", round(result_time,2)) 
             return df
 
         elif button_remove:
