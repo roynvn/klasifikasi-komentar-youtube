@@ -8,7 +8,7 @@ from googleapiclient.discovery import build
 import numpy as np
 import pandas as pd
 from streamlit.proto.Image_pb2 import Image
-
+import time
 
 def app():
     st.title("Hasil Scrape Data")
@@ -37,6 +37,7 @@ def app():
                                                     maxResults="100", 
                                                     textFormat="plainText")
             while (True):
+                start = time.time()
                 data_comment = param_comment.execute()
                 for i in data_comment["items"]:
                     name = i["snippet"]["topLevelComment"]["snippet"]["authorDisplayName"]
@@ -74,7 +75,10 @@ def app():
                                 "Komentar": [i[1] for i in data_video], 
                                 "Waktu": [i[2] for i in data_video],
                                 "Likes": [i[3] for i in data_video], 
-                                "Reply Count": [i[4] for i in data_video]})   
+                                "Reply Count": [i[4] for i in data_video]})  
+            end = time.time()
+            result_time = end - start  
+            st.write("Waktu: ", round(result_time,2))  
         if video_id != "":
             get_all_comment(video_id)
         
