@@ -4,6 +4,7 @@ import os
 import json
 import numpy as np 
 import pandas as pd
+import time
 
 #TF IDF
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -23,6 +24,7 @@ def app():
     filePath = 'jsonfile/scrape.json'
     filePath2 = 'jsonfile/preprocess.json'
     try:
+        start = time.time()
         st.title("Hasil Analisis Sentimen")
         st.write("Progress:")
         my_bar = st.progress(0)
@@ -112,7 +114,10 @@ def app():
         my_bar.progress(75+25)
         st.plotly_chart(graf_chart)
         
-      
+        end = time.time()
+        result_time = end - start  
+        st.write("Waktu: ", round(result_time,2)) 
+
         os.remove(filePath)
         os.remove(filePath2)
         st.info("SEMUA DATA TELAH DIHAPUS")
