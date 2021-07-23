@@ -25,6 +25,7 @@ def app():
                 ''')
     video_id = st.text_input("Masukkan video id ")
     try:
+        start = time.time()
         st.write("Video id yang digunakan:",video_id)
         os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
         youTubeApiKey =  "AIzaSyC2jlBOOrLdG9GKjUZzefQzVbqN0K9dhYA"
@@ -37,7 +38,6 @@ def app():
                                                     maxResults="100", 
                                                     textFormat="plainText")
             while (True):
-                start = time.time()
                 data_comment = param_comment.execute()
                 for i in data_comment["items"]:
                     name = i["snippet"]["topLevelComment"]["snippet"]["authorDisplayName"]
