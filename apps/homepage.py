@@ -35,8 +35,8 @@ def loadpage():
                 </br>
                 </br>
                 Dibuat oleh: </br>
-                Nama    : Roy Noviantho</br>
-                NIM     : 1103198217 </br>
-                Prodi   : S1 Teknik Komputer </br>
+                Nama        : Roy Noviantho</br>
+                LinkedIn    : linkedin.com/in/roynvn/ </br>
+                Email       : roynvn24@gmail.com </br>
             </div>               
     """,unsafe_allow_html=True)
