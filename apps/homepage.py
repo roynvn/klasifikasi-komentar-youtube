@@ -5,9 +5,8 @@ def loadpage():
     st.markdown("""
             <div>
                 <p class="abstrak", align="justify">
-                Website ini merupakan implementasi dari sistem Tugas Akhir yang telah dibuat
-                dengan judul "Analisis Sentimen pada Komentar Video Ulasan Makanan dari Saluran
-                Youtube Berbahasa Indonesia".
+                Website ini digunakan untuk melakukan analisis sentimen komentar pada video youtube khususnya mengenai ulasan makanan.
+                Menggunakan metode K-Nearest Neighbor, hasil akhir akan menampilkan komentar yang termasuk kedalam komentar positif atau negatif.
                 </br>
                 </br>
                 Terdapat 3 menu yang dapat digunakan yaitu: </br>
